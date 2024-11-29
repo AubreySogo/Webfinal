@@ -1,0 +1,249 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 3fr 10%;
+    grid-template-columns: 20% auto 20%;
+}
+
+.logo{
+    margin: 5px;
+    transition: all 1s ease-in;
+}
+
+.logo img:hover{
+    border-radius: 25%;
+    background-color: blueviolet;
+}
+
+#nav{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:4;
+    background-color: rgba(176, 65, 255, 0.628);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px black solid;
+    transition: all;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#nav h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#nav ul li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(125, 125, 255);
+    transition: all 0.5s;
+}
+
+#nav ul li:hover{
+    background-color: fuchsia;
+    width: 70px;
+    text-align: center;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 60%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: auto;
+}
+
+
+#footer{
+    border-top: 5px black solid;
+    grid-column: span 3;
+    background: url(Images/midday-sun-directly-overhead-clouds-260nw-2156345489.webp);
+    background-color: lightpink;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+}
+
+#left{
+    background: url(Images/wp13595934.webp);
+    background-color: rgba(255, 182, 193, 0.871);
+    background-blend-mode: screen;
+    background-position: center;
+}
+
+#left h2{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: azure;
+    text-decoration: underline;
+    border: 5px white solid;
+}
+
+#right{
+    background: url(Images/pngtree-nature-sunrise-wallpaper-image_15575905.jpg);
+    background-color: rgba(255, 182, 193, 0.871);
+    background-blend-mode: screen;
+    background-position: center;
+}
+
+#right h2{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: azure;
+    text-decoration: underline;
+    border: 5px white solid;
+}
+
+#mainstuff{
+    background-color: rgb(113, 158, 255);
+}
+
+#mainstuff h1{
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 5px black solid;
+}
+
+#mainstuff h2{
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#mainstuff p{
+    margin: 10px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+#mainstuff img{
+    transition: all 0.5s;
+    background-color: black;
+    border: 5px black solid;
+    margin: 10px;
+    padding: 10px
+}
+
+#mainstuff img:hover{
+    background-color: azure;
+    transform: scale(2);
+}
+
+#left p{
+    text-align: center;
+    background-color: rgba(240, 255, 255, 0.551);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10Px;
+}
+
+#right p{
+    text-align: center;
+    background-color: rgba(240, 255, 255, 0.551);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 10Px;
+}
+
+.btn{
+    background:linear-gradient(lightpink, rgb(94, 94, 241));
+    border: 3px black solid;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 15px;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    user-select: none;
+    font-size: 16px;
+}
+.btn:active{
+    background:linear-gradient(blue,lightpink);
+    color: aqua;
+}
+
+h1::first-letter{
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#mainstuff h1::first-letter{
+    font-size: 120%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: rgb(104, 14, 132);
+}
+
+#left h2::first-letter{
+    font-size: 120%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: rgb(104, 14, 132);
+}
+
+#right h2::first-letter{
+    font-size: 120%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: rgb(104, 14, 132);
+}
+
+@media(max-width: 768px){
+    .container{
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+    }
+    
+    #mainstuff{
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media(max-height: 1174px){
+    .container{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+@media(orientation:portrait){
+    #mainstuff{
+        background-color: rgb(253, 155, 120);
+    }
+}
